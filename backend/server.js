@@ -14,7 +14,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({
-  origin: "https://linkedin-clone-backend-qafw.onrender.com",
+  origin: "https://linked-in-clone-fawn-two.vercel.app/",
   credentials: true
 }));
 app.use(express.static("uploads"));
