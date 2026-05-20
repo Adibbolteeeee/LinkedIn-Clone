@@ -13,7 +13,10 @@ const app = express();
 // ✅ Middlewares
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: "https://linkedin-clone-backend-qafw.onrender.com",
+  credentials: true
+}));
 app.use(express.static("uploads"));
 app.use(postRoutes);
 app.use(userRoutes);

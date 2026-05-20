@@ -2,7 +2,7 @@ const axios = require("axios");
 
 
 
-export const BASE_URL = "https://linked-in-clone-ie9l.vercel.app";
+export const BASE_URL = "https://linkedin-clone-backend-qafw.onrender.com";
 
 export const clientServer = axios.create({
     baseURL : BASE_URL,
