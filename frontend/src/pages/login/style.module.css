@@ -70,3 +70,15 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+@media only screen and (max-width:600px) {
+    .cardContainer {
+        display: flex;
+        flex-direction: column;
+        height: 70vh;
+    }
+
+    .cardContainer_left {
+        max-height: fit fit-content;
+    }
+}

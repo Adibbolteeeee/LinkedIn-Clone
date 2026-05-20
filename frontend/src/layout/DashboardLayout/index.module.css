@@ -14,14 +14,116 @@
 .homeContainer_leftBar {
     display: flex;
     flex-direction: column;
+    align-items: start;
+    gap: 1.3rem;
+    border-right: 1px solid #ccc;
 }
 
 .sideBarOption {
     display: flex;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    gap: 1rem;
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .sideBarOption > svg {
-    max-height: 1.4em;
+    height: 1.4em;
+    min-width:fit-content;
+}
+
+.sideBarOption:hover {
+    transform: scale(1.04);
+}
+
+.homeContainer_extraContainer {
+    border-left: 1px solid #ccc;
+    padding-left: 1rem;
+    
+}
+
+.mobileNavbar {
+    position: fixed;
+    bottom: 20px; /* Add some spacing from bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent; /* Completely transparent */
+    z-index: 1000;
+    padding: 10px 20px;
+    border-radius: 50px; /* Makes it pill-shaped if you add background later */
+}
+
+.singleNavItemHolder_mobileView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.9); /* Optional: semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavbar svg {
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+    transition: all 0.2s;
+    stroke: #333;
+}
+
+.mobileNavbar svg:hover {
+    transform: scale(1.1);
+    stroke: #0077b5; /* LinkedIn blue on hover */
+}
+
+@media only screen and (max-width: 600px) {
+    .homeContainer_extraContainer {
+        display: none;
+    }
+    .homeContainer {
+        display: block;
+        padding-bottom: 80px; /* Add padding so content doesn't hide behind navbar */
+    }
+    .homeContainer_leftBar {
+        display: none;
+    }
+    
+    .mobileNavbar {
+        display: flex;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .mobileNavbar {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    .homeContainer_extraContainer {
+        display: none;
+    }
+    .homeContainer {
+        display: block;
+        padding-bottom: 80px; /* Add padding so content doesn't hide behind navbar */
+    }
+    .homeContainer_leftBar {
+        display: none;
+    }
+    
+    .mobileNavbar {
+        display: flex;
+    }
 }

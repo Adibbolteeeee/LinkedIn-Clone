@@ -43,3 +43,16 @@
     padding-block: 0.8rem;
     border-radius: 20px;
 }
+
+@media only screen and (max-width:600px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+
+    .mainContainer_left {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

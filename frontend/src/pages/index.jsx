@@ -16,35 +16,38 @@ const geistMono = Geist_Mono({
 });
 
 export default function Home() {
-
   const router = useRouter();
   return (
     <>
-    <UserLayout>
-      <div className={styles.container}>
-        <div className={styles.mainContainer}>
-          <div className={styles.mainContainer_left}>
-            <p>Connect with friends without exaggeration</p>
-            <p>A true social media platform, with stories no bluffs.</p>
+      <UserLayout>
+        <div className={styles.container}>
+          <div className={styles.mainContainer}>
+            <div className={styles.mainContainer_left}>
+              <p>Connect with friends without exaggeration</p>
+              <p>A true social media platform, with stories no bluffs.</p>
 
-            <div onClick={(() => {
-              router.push("/login")
-            })} className={styles.buttonJoin}>
-              <p>Join Now</p>
+              <div
+                onClick={() => {
+                  router.push("/login");
+                }}
+                className={styles.buttonJoin}
+              >
+                <p>Join Now</p>
+              </div>
+            </div>
+
+            <div className={styles.mainContainer_right}>
+              <Image
+                src="/images/default-avatar.png"
+                width={400}
+                height={400}
+                alt="image"
+                priority
+              />
             </div>
           </div>
-
-          <div className={styles.mainContainer_right}>
-            <Image
-              src="/images/image.png"
-              width={400}
-              height={400}
-              alt="image"
-            />
-          </div>
         </div>
-      </div>
-    </UserLayout>
+      </UserLayout>
     </>
   );
 }

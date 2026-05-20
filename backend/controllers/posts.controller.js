@@ -106,7 +106,7 @@ export const commentPost = async (req, res) => {
 
 // ✅ Get Comments by Post
 export const getCommentsByPost = async (req, res) => {
-  const { postId } = req.body;
+  const { postId } = req.query;
 
   try {
     const comments = await Comment.find({ postId }).populate(
@@ -114,7 +114,7 @@ export const getCommentsByPost = async (req, res) => {
       "name username profilePicture"
     );
 
-    return res.json({ comments });
+    return res.json({ comments: comments.reverse() });
   } catch (err) {
     return res.status(500).json({ message: err.message });
   }

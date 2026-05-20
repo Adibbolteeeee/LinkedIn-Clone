@@ -1,0 +1,156 @@
+.userCard {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.3rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.profilePicture > img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.connectedButton {
+    padding: 0.5rem 1.2rem;
+    background-color: white;
+    color: #0073b1;
+    border: 1px solid #0073b1;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.connectedButton:hover {
+    background-color: #0073b1;
+    color: white;
+}
+
+.userCard_card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.userInfo h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.userInfo p {
+    margin: 0.2rem 0 0 0;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.requestsContainer,
+.connectionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .userCard {
+        width: calc(100% - 2rem);
+        margin: 0 auto;
+        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .userCard_card {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .cards {
+        margin: 0.5rem;
+        width: 100%;
+    }
+    
+    .requestsContainer,
+    .connectionsContainer {
+        padding: 0 0.5rem;
+    }
+    
+    .profilePicture > img {
+        width: 4rem;
+        height: 4rem;
+    }
+    
+    .userInfo h3 {
+        font-size: 1rem;
+    }
+    
+    .userInfo p {
+        font-size: 0.85rem;
+    }
+    
+    .connectedButton {
+        width: 100%;
+        max-width: 200px;
+        padding: 0.6rem 1rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .userCard {
+        padding: 0.8rem;
+        gap: 0.8rem;
+    }
+    
+    .profilePicture > img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    
+    .userInfo h3 {
+        font-size: 0.95rem;
+    }
+    
+    .userInfo p {
+        font-size: 0.8rem;
+    }
+    
+    .connectedButton {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Fix for global h1 selector */
+    :global(h1) {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .userCard {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    .cards {
+        margin: 0.8rem;
+    }
+}

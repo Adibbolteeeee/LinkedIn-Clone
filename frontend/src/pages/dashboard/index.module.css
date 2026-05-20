@@ -1,0 +1,271 @@
+
+.scrollComponent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.createPostContainer {
+    display: flex;
+    align-items: center;
+    height: 12.5svh !important;
+    width: 70%;
+    gap: 1.3rem;
+    position: relative;
+    padding-inline: 0.8rem;
+    background-color: rgb(253, 244, 244);
+    border-radius: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.createPostContainer > textarea {
+    width: 100%;
+}
+.fab > svg {
+    width: fit-content;
+    height: 40px;
+    color: white;
+}
+
+
+.fab {
+    background-color: rgb(164, 59, 255);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.userProfile {
+    border-radius: 100%;
+    height: 60%;
+    width: fit-content;
+}
+
+.textArea {
+    width: 80%;
+    height: 70%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+    outline: none;
+}
+
+.uploadButton {
+    position: absolute;
+    right: 0;
+    bottom: -30px;
+    background-color: rgb(47, 95, 254);
+    color: white;
+    border-radius: 0.3rem;
+    padding-inline: 1.3rem;
+    padding-block: 0.8rem;
+}
+
+
+
+.postsContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; 
+}
+
+.singleCard {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 1.2rem 1.4rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.singleCard_profileContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 0.8rem;  
+    margin-bottom: 0.8rem;   
+    border-bottom: 1px solid #e0e0e0;
+}
+.singleCard_profileContainer > img {
+    width: 10%;
+    margin-bottom: 1rem;
+    place-self: start;
+}
+
+.userName {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.wrapper {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.singleCard_image {
+    width: 100%;
+    padding-top: 0.6rem;
+    height: fit-content;
+    overflow: hidden;
+}
+.singleCard_image > img {
+   width: 100%;
+   height: auto;
+   object-fit: cover;
+}
+
+.optionContainer {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    padding-block: 0.5rem;
+}
+
+.singleOption_OptionContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.singleOption_OptionContainer > svg{
+    height: 100%;
+    width: 13%;
+    min-width: 1rem;
+}
+
+.commentsContainer {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allCommentsContainer {
+
+    height: 80vh;
+    min-width: 40svw;
+    max-width: 1000px ;
+    background-color: white;
+    border-radius: 1rem;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* ✅ only comments scroll */
+.commentsScroll {
+    height: calc(80vh - 90px);
+
+    overflow-y: auto;
+
+    padding: 1.5rem;
+
+    box-sizing: border-box;
+}
+
+/* ✅ fixed bottom comment box */
+.postCommentContainer {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    padding: 1rem 1.5rem;
+
+    background-color: white;
+
+    border-top: 1px solid rgb(230,230,230);
+
+    box-sizing: border-box;
+}
+
+.postCommentContainer > input {
+    flex: 0.9;
+
+    padding-inline: 1.5rem;
+    padding-block: 0.8rem;
+
+    border: 1px solid silver;
+    border-radius: 0.5rem;
+
+    outline: none;
+
+    background-color: rgb(253, 244, 244);
+}
+
+.postCommentContainer_commentBtn {
+    flex: 0.1;
+
+    padding: 0.7rem;
+
+    background-color: rgb(155, 112, 255);
+
+    color: white;
+
+    border-radius: 0.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+.singleComment {
+    margin-bottom: 1rem;
+}
+
+.singleComment_profileContainer {
+    display: flex;
+
+    gap: 1rem;
+
+    background-color: rgb(253, 244, 244);
+
+    padding: 0.8rem;
+
+    border-radius: 0.5rem;
+}
+
+.singleComment_profileContainer > img {
+    width: 50px;
+    height: 50px;
+
+    object-fit: cover;
+
+    border-radius: 100%;
+}
+
+@media screen and (max-width:600px){
+    .allCommentsContainer {
+        width: 80%;
+    }
+}

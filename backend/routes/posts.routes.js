@@ -21,11 +21,11 @@ router.route("/").get(PostController.activeCheck);
 
 router
   .route("/post")
-  .post(upload.single("media"), PostController.createPost);
+  .post(upload.single("file"), PostController.createPost);
 
 router.route("/posts").get(PostController.getAllPosts);
 
-router.route("/deletePost").post(PostController.deletePost);
+router.route("/deletePost").delete(PostController.deletePost);
 
 router.route("/addComment").post(PostController.commentPost);
 

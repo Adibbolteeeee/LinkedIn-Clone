@@ -1,0 +1,23 @@
+.userProfileCard {
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 1rem;
+    border-radius: 1rem;
+    cursor : pointer;
+}
+.userProfileCard img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.userProfileCard .userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+}
