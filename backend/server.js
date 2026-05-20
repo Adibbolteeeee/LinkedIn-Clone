@@ -28,7 +28,7 @@ async function main() {
   }
 }
 
-main();
+await main();
 
 // ✅ Server
 app.listen(9090, () => {
